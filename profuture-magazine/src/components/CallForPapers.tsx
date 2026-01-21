@@ -37,11 +37,11 @@ export const CallForPapers: React.FC = () => {
             <div className="flex gap-[60px] justify-center items-start flex-col lg:flex-row w-full max-w-[1440px]">
 
                 {/* Left Side: Call For Papers Card */}
-                <div className="relative flex flex-col items-center gap-[10px] p-[14px_19px] w-[428px] h-[721px] rounded-[25px] border-[5px] border-[#FFD9DA] bg-white shadow-[0_5px_15px_0_rgba(191,191,191,0.25)] z-30 overflow-hidden flex-shrink-0">
+                <div className="relative flex flex-col items-center gap-[10px] p-[10px] lg:p-[14px_19px] w-full max-w-[428px] h-auto rounded-[25px] border-[5px] border-[#FFD9DA] bg-white shadow-[0_5px_15px_0_rgba(191,191,191,0.25)] z-30 overflow-hidden flex-shrink-0">
 
                     {/* Son Sayı Badge */}
-                    <div className="absolute left-0 top-[200px] bg-[#D71D1D] w-[45px] h-[160px] rounded-r-[20px] shadow-md z-40 flex items-center justify-center">
-                        <span className="text-white text-[22px] font-bold -rotate-90 whitespace-nowrap tracking-wide">Son Sayı</span>
+                    <div className="absolute left-0 top-[100px] lg:top-[200px] bg-[#D71D1D] w-[35px] lg:w-[45px] h-[120px] lg:h-[160px] rounded-r-[20px] shadow-md z-40 flex items-center justify-center">
+                        <span className="text-white text-[18px] lg:text-[22px] font-bold -rotate-90 whitespace-nowrap tracking-wide">Son Sayı</span>
                     </div>
 
                     <div className="flex flex-col items-center gap-[25px] w-full relative h-full">
@@ -49,7 +49,7 @@ export const CallForPapers: React.FC = () => {
                         <img
                             src="/images/left-card-image.png"
                             alt="Main Visual"
-                            className="relative h-[611px] w-full object-cover shadow-[0_4px_4px_0_rgba(128,128,128,0.25)] rounded-[5px]"
+                            className="relative w-full h-auto object-cover shadow-[0_4px_4px_0_rgba(128,128,128,0.25)] rounded-[15px] lg:rounded-[5px]"
                         />
 
                         {/* Action Buttons Container - Centered Bottom */}

@@ -65,7 +65,7 @@ export const IssuesSection: React.FC = () => {
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {issues.map((item) => (
-                        <div key={item.id} className="flex p-4 gap-[15px] rounded-[20px] border border-[#E9F4F8] bg-white overflow-hidden relative shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div key={item.id} className="flex flex-col sm:flex-row p-4 gap-[15px] rounded-[20px] border border-[#E9F4F8] bg-white overflow-hidden relative shadow-sm hover:shadow-md transition-shadow duration-300">
 
                             {/* Latest Issue Ribbon */}
                             {item.isLatest && (
@@ -75,7 +75,7 @@ export const IssuesSection: React.FC = () => {
                             )}
 
                             {/* Cover Image */}
-                            <div className="w-[191px] h-[285px] shrink-0 relative overflow-hidden rounded-[35px] bg-[#D9D9D9]">
+                            <div className="w-full sm:w-[191px] h-[285px] shrink-0 relative overflow-hidden rounded-[20px] sm:rounded-[35px] bg-[#D9D9D9]">
                                 {/* Using the specific image from the snippet as placeholder or the dynamic one */}
                                 <img
                                     src={item.image}

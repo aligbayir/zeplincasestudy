@@ -42,7 +42,7 @@ const Footer = () => {
     return (
         <footer className="w-full bg-[#161F3C] text-white flex flex-col items-center">
             {/* Main Content Area */}
-            <div className="w-full max-w-[1728px] px-[139px] py-[60px] flex flex-col gap-[40px]">
+            <div className="w-full max-w-[1728px] px-5 lg:px-[139px] py-[60px] flex flex-col gap-[40px]">
 
                 {/* Info Columns */}
                 <div className="flex flex-col lg:flex-row items-start justify-between gap-[40px] w-full">
