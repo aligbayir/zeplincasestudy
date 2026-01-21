@@ -1,9 +1,13 @@
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
+
+# 📸 Screenshots
+
+| Homepage | Categories | Call For Articles |
+| :---: | :---: | :---: |
+| ![alt text](image.png) | ![alt text](image-1.png) | ![alt text](image-2.png) |
+
+| Call For Papers | Footer | Mobile View |
+| :---: | :---: | :---: |
+| ![alt text](image-3.png) | ![alt text](image-4.png) | ![alt text](image-5.png) |
 # Profuture Magazine - Zeplin Case Study
 
 This project is a modern web application implementation of the Profuture Magazine design, originally provided as a Zeplin case study. It is built using **React 19**, **TypeScript**, and **Tailwind CSS**, focusing on pixel-perfect design, responsiveness, and clean code architecture.
