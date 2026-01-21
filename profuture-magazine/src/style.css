@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-primary-blue: #273D89;
+  --color-primary-red: #DB0D15;
+  --color-primary-navy: #081542;
+  --color-primary-green: #A8B95E;
+  --color-primary-orange: #DE8536;
+  --color-primary-beige: #FBF6E3;
+  --color-light-blue: #C6ECFF;
+
+  /* Accents */
+  --color-accents-teal: #00C3D0;
+
+  /* Neutrals */
+  --color-text-dark: #2A2C31;
+  --color-text-gray: #676A73;
+  --color-stroke: #ACB1C6;
+
+  --font-sans: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply text-text-dark bg-white font-sans antialiased;
+  }
+
+  h1 {
+    @apply text-[32px] leading-[38px] font-bold;
+  }
+
+  h2 {
+    @apply text-[28px] leading-[36px] font-bold;
+  }
+
+  h3 {
+    @apply text-[26px] leading-[32px] font-bold;
+  }
+
+  h4 {
+    @apply text-[24px] leading-[30px] font-bold;
+  }
+
+  h5 {
+    @apply text-[22px] leading-[28px] font-bold;
+  }
+
+  h6 {
+    @apply text-[20px] leading-[26px] font-bold;
+  }
+}
+
+.container {
+  @apply max-w-[1728px] mx-auto relative overflow-x-hidden;
+}
+
+@layer components {
+  .toggle-btn {
+    @apply px-6 py-3 rounded-xl font-medium transition-all duration-200 cursor-pointer;
+
+    /* Default State */
+    @apply bg-white text-primary-blue shadow-[0_2px_10px_#0000000d];
+
+    /* Hover State */
+    &:hover:not(:disabled) {
+      @apply bg-primary-blue text-white shadow-lg transform -translate-y-0.5;
+    }
+
+    /* Active State */
+    &.active {
+      @apply bg-light-blue text-primary-blue border border-primary-blue;
+    }
+
+    /* Disabled State */
+    &:disabled {
+      @apply bg-[#E0E0E0] text-[#A0A0A0] cursor-not-allowed transform-none shadow-none;
+    }
+  }
+
+  .badge {
+    @apply px-[10px] py-[3px] rounded-[8px] text-[14px] font-medium inline-flex items-center justify-center;
+
+    /* Solid Variants */
+    &.badge-teal {
+      @apply bg-accents-teal text-white uppercase;
+    }
+
+    &.badge-navy {
+      @apply bg-primary-navy text-white uppercase;
+    }
+
+    &.badge-orange {
+      @apply bg-primary-orange text-white;
+    }
+
+    &.badge-green {
+      @apply bg-primary-green text-white;
+    }
+
+    &.badge-blue {
+      @apply bg-primary-blue text-white;
+    }
+
+    /* Light Variant */
+    &.badge-light {
+      @apply bg-[#F6F8FF] text-primary-navy;
+    }
+  }
+
+  .pagination-container {
+    @apply flex items-center gap-3;
+  }
+
+  .pagination-btn {
+    @apply w-10 h-10 rounded-full flex items-center justify-center text-[16px] font-medium transition-colors duration-200 cursor-pointer border-none;
+
+    /* Default (Inactive) */
+    @apply bg-[#EEF2FF] text-primary-navy hover:bg-[#E0E7FF];
+
+    /* Active State */
+    &.active {
+      @apply bg-primary-blue text-white hover:bg-primary-blue;
+    }
+
+    /* Arrows */
+    &.arrow-btn {
+      @apply bg-[#EEF2FF] text-primary-blue hover:bg-[#E0E7FF] text-xl;
+    }
+  }
+
+  .pagination-dots {
+    @apply text-text-gray font-medium px-1;
+  }
+
+  /* --- Global Buttons --- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-200 cursor-pointer text-[16px];
+
+    /* Blue Variant (Dergi Kurulu, Görüntüle) */
+    &.btn-blue {
+      @apply bg-primary-blue text-white hover:bg-primary-navy shadow-[0_4px_10px_#273d8933];
+    }
+
+    /* Red Variant (Gönder) */
+    &.btn-red {
+      @apply bg-primary-red text-white hover:bg-[#A00000] shadow-[0_4px_10px_#db0d1533];
+    }
+
+    /* Green Variant (Yazar Rehberi) */
+    &.btn-green {
+      @apply bg-primary-green text-white hover:bg-[#8A9A40] shadow-[0_4px_10px_#a8b95e33];
+    }
+
+    /* Outline/Light (Detay) */
+    &.btn-light-outline {
+      @apply bg-[#FBFBFD] border border-[#E9E9F0] text-text-dark hover:bg-primary-navy hover:text-white hover:border-primary-navy;
+    }
+
+    /* Dark Navy (Alternative Detay) */
+    &.btn-navy {
+      @apply bg-primary-navy text-white hover:opacity-90;
+    }
+  }
+
+  /* --- Icon Buttons --- */
+  .btn-icon {
+    @apply w-12 h-12 rounded-full inline-flex items-center justify-center transition-all duration-200 cursor-pointer border border-[#E9E9F0] bg-white text-text-dark hover:bg-primary-blue hover:text-white hover:border-primary-blue;
+
+    &.btn-icon-sm {
+      @apply w-10 h-10;
+    }
+  }
+}
